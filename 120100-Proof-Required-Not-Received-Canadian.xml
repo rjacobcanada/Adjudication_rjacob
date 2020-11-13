@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<residence-calculation-testcase>
+    <TestName>120100-Proof-Required-Not-Received-Canadian</TestName>
+	<description>Residence. Proof Required, Not Received. Canadian Only</description>      
+    <ResidenceRequest xmlns="http://cfp.gc.ca/as">
+        <ResidencePeriods>
+            <ResidencePeriod>
+                <ResidencePeriodType>3</ResidencePeriodType>
+                <StartDate>1960-01-01</StartDate>
+                <EndDate>2019-01-01</EndDate>
+                <CountryCode>42</CountryCode>
+                <ProofRequired>YES</ProofRequired>
+                <ProofReceived>NO</ProofReceived>
+            </ResidencePeriod>
+        </ResidencePeriods>
+        <DateOfBirth>1960-01-01</DateOfBirth>
+        <TargetDate>2019-01-01</TargetDate>
+    </ResidenceRequest>
+	<!--Expected Response-->
+    <ResidenceResponse xmlns="http://cfp.gc.ca/as">
+	    <ResidencePeriodDurations>
+			<ResidencePeriodDuration>
+				<StartDate>1960-01-01</StartDate>
+				<EndDate>2019-01-01</EndDate>
+				<CountryCode>42</CountryCode>
+				<CalculatedResidencePeriod>
+					<Years>41</Years>
+					<Days>1</Days>
+				</CalculatedResidencePeriod>
+			</ResidencePeriodDuration>
+		</ResidencePeriodDurations>
+	    <CalculatedResidencePeriods>
+	        <CalculatedResidencePeriod>
+	            <ResidenceTotalType>Canadian</ResidenceTotalType>
+	            <Years>0</Years>
+	            <Days>0</Days>
+	        </CalculatedResidencePeriod>
+	        <CalculatedResidencePeriod>
+	            <ResidenceTotalType>Creditable</ResidenceTotalType>
+	            <Years>0</Years>
+	            <Days>0</Days>
+	        </CalculatedResidencePeriod>
+	        <CalculatedResidencePeriod>
+	            <ResidenceTotalType>Foreign non-creditable</ResidenceTotalType>
+	            <Years>0</Years>
+	            <Days>0</Days>
+	        </CalculatedResidencePeriod>
+	        <CalculatedResidencePeriod>
+	            <ResidenceTotalType>Total</ResidenceTotalType>
+	            <Years>0</Years>
+	            <Days>0</Days>
+	        </CalculatedResidencePeriod>
+	    </CalculatedResidencePeriods>
+	    <Portability>false</Portability>
+	</ResidenceResponse>
+</residence-calculation-testcase>
